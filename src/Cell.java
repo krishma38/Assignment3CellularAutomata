@@ -1,3 +1,5 @@
+
+import java.util.HashMap;
 public class Cell {
 
     //set variables
@@ -5,6 +7,7 @@ public class Cell {
     private int x;
     private int y;
     private int id;
+    private HashMap<String,Integer> chemMap;
 
     //setter constructor
     public Cell(int strength, int x, int y, int id) {
@@ -69,6 +72,7 @@ public class Cell {
 
     //default constructor
     public Cell(){
+
         this(0,0,0,0);
     }
 
@@ -79,11 +83,18 @@ public class Cell {
 
     //main
     public static void main(String[] args){
-        Cell A = new Cell(-34,-4,4,7);
-        System.out.println(A.strength);
-        System.out.println(A.x);
-        System.out.println(A.y);
-        System.out.println(A.id);
+        Cell A = new Cell(-34,-4,4,0);
+        System.out.println("strength: " + A.strength);
+        System.out.println("x: " + A.x);
+        System.out.println("y: " + A.y);
+        System.out.println("id: " + A.id);
+
+        HashMap<String,Integer> chemical = new HashMap<>();
+        chemical.put("ATP", 0);
+        chemical.put("Glucose", 3);
+        chemical.put("Lactate", 6);
+        System.out.println("Chemical Levels: " + chemical);
+
         A.interactNeighbours();
     }
 }
