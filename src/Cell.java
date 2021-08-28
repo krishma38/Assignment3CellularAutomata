@@ -83,7 +83,7 @@ public class Cell {
 
     //main
     public static void main(String[] args){
-        Cell A = new Cell(-34,-4,4,0);
+        Cell A = new Cell();
         System.out.println("strength: " + A.strength);
         System.out.println("x: " + A.x);
         System.out.println("y: " + A.y);
